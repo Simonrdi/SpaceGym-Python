@@ -1,0 +1,43 @@
+<html>
+    <link rel="stylesheet" href="/static/Style.css">
+    <script type="module" src="/static/index.js"></script>
+    <title>Space-Gym</title>
+        <div class="titolo"><h2>   <!-- barra di titolo-->
+            <a href="/prova"> <img class="logo" src="/static/image-removebg-preview.png"></a>Space-Gym <a class="fotoprofilo" href="/login"> <img class="profilo" src="/static/profilo.png" > </a> 
+        </h2>
+         
+        </div>
+<body>
+    <h6 style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 240%;">Prenota Space</h6>
+
+    {% with messages = get_flashed_messages(with_categories=true) %} <!-- flash per i mesaggi di avvenuta prenotazione-->
+      {% if messages %}
+        <ul>
+          {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+        <label for="space_id">Scegli la stanza:</label>
+        <select name="space_id" id="space_id" required>
+            {% for space in spaces %}
+                <option value="{{ space.num }}">{{ space.NAME }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label for="start_time" style="font-size: 20px;"> Inizio:</label>
+        <input type="datetime-local" name="start_time" id="start_time" required><br><br>
+
+        <label for="end_time" style="font-size: 20px;">  Fine:   </label>
+        <input type="datetime-local" name="end_time" id="end_time" required><br><br>
+
+        <input type="submit" value="Prenota">
+        <label for="home"> <p>Per tornare indietro clicca <a href="/home">qui</a></p></label>
+
+    </form>
+</body>
+</html>
+

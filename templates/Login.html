@@ -1,0 +1,41 @@
+<html>
+    
+    <link rel="stylesheet" href="/static/Style copia.css">
+    <title>Space-Gym</title>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <body>
+        <div class="titolo"><h2>   <!-- barra di titolo-->
+            <a href="/prova"> <img class="logo" src="/static/image-removebg-preview.png"></a>Space-Gym <a class="fotoprofilo" href="/login"> <img class="profilo" src="/static/profilo.png" > </a> 
+        </h2>
+         
+        </div>
+        
+        <div class="image"> <!--immaggine di rappresentanza-->
+            <!--<img src="/static/piacenza.jpg" style="width: 100%; height: 50% ">   creare successivamente classe flex che ridiemnsione immaggine rispetto al dispositivo https://www.html.it/articoli/immagini-flessibili/  -->
+        </div>
+        <h6 style="text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 240%;">Login</h6>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+             <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}
+
+
+        <div class="login">
+            <form method="post">
+                <label for="email"> <p style="font-size: 30px;">Email:</p></label>
+                <input type="text" style="width: 300px;" name="email" placeholder="Email"><br> <br>
+                <label for="psw"><p style="font-size: 30px;">Password:</p></label> 
+                <input type="password" style="width: 300px;" name="password" placeholder="Password"> <br><br>
+                <input type= "submit" name="subimit" style="width: 150px; height: 50px;" id="submit" value="Accedi!"> <br><br>
+                <label for="register"> <p style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;">Se non hai ancora un account clicca  <a href="/register"> qui</a> </p> </label> 
+                <a class="Google" href="/login/google" role="button">Login With Google</a> <img src="/static/Google.png" style="height: 35px;"> 
+              </form>
+        </div>
+       
+    </body>

@@ -1,0 +1,113 @@
+body{
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: rgb(229, 229, 234);
+}
+.titolo {
+    background-color: black;
+    color: white;
+    padding: 20px ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+    text-align: center;
+}
+.logo{
+    width: 110px;
+     /* height: 13%; */
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    float:left; 
+    margin: 0%;
+    
+}
+/* possibile creare diversi layout a seconda del dispostivo https://www.html.it/pag/36867/responsive-web-design/ */ 
+.profilo{
+    width: 55px;
+    height: auto;
+    float: right;
+    margin: 10px;
+    position: absolute;
+    top: 3%;
+    right: 1%;}
+input{
+    width: auto;
+    align-items: center;
+    padding: 10px;
+}
+
+form {
+    
+    text-align: center;
+    padding: 200px;
+}
+label {
+    text-align: center;
+    width: 1750px;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 125%;
+}
+
+div#tendina{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    border: 1px solid black;
+    width: 150px;
+    z-index: 100;
+}
+div#tendina ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    }
+div#tendina li{
+    width:100px;
+    float:left;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid black;
+    color:black;
+    }
+div#tendina a{
+    display: block;
+    padding: 5px;
+    color: #000;
+    text-decoration: none;
+    }
+div#tendina a:hover{
+    background-color: #000033;
+    color: #FFFFFF;
+    text-decoration: none;
+    }
+div#tendina li:hover ul{
+display: block;
+position: absolute;
+z-index:1;
+width:150px;
+padding: 0;
+margin: 0 0 0 -1px;
+border:1px solid black;
+background: white;
+}
+.fotoprofilo {
+    position: absolute;
+    top: 1.5%;
+    right: 1%;
+    display: flex;
+    align-items: center;
+    z-index: 999;
+}
+.fotoprofilo:hover #tendina {
+    display: block;
+
+}
+.Google{
+    font-size: 25px; font-family: Arial, Helvetica, sans-serif;
+}
+/*https://www.youtube.com/watch?v=QFNOsfJZ1M4*/ 

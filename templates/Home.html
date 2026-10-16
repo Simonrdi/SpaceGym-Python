@@ -1,0 +1,43 @@
+
+<html>
+
+    <link rel="stylesheet" href="/static/Style.css">
+    <script type="module" src="/static/index.js"></script>
+   
+    <title>Space-Gym</title>
+    <body>
+        <div class="titolo"><h2>   <!-- barra di titolo-->
+            <a href="/prova"> <img class="logo" src="/static/image-removebg-preview.png"></a>Space-Gym <a class="fotoprofilo" href="/login"> <img class="profilo" src="/static/profilo.png" > </a> 
+        </h2>
+         
+        </div>
+    <div id="benvenuto">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <p> Bentornato {{ message }} </p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+  
+</div>
+
+
+</div>
+
+    <div style="height: 40px;"></div>
+
+    <div style="text-align: center; margin-top: 40px;">
+        <div style="display: inline-block; margin: 20px;">
+            <a href="/allenamenti"><img src="/static/1.jpeg" alt="Foto 1" style="width: 600px; height: auto;"> </a>
+            <p style="font-family: Arial, sans-serif; font-size: 16px;">Sezione allenamenti (work in progress ⚠️)</p>
+        </div>
+        <div style="display: inline-block; margin: 20px;">
+            <a href="/prenota"><img src="/static/2.jpeg" alt="Foto 2" style="width: 600px; height: auto;"> </a>
+            <p style="font-family: Arial, sans-serif; font-size: 16px;">Prenota la tua sessione</p>
+        </div>
+    </div>
+
+    </body>
+</html>

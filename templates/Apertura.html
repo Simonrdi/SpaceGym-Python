@@ -1,0 +1,72 @@
+<html>
+    <link rel="stylesheet" href="/static/Style.css">
+    <script type="module" src="/static/index.js"></script>
+    <title>Space-Gym</title>
+    <body>
+        <div class="titolo"><h2>   <!-- barra di titolo-->
+            <a href="/prova"> <img class="logo" src="/static/image-removebg-preview.png"></a>Space-Gym <a class="fotoprofilo" href="/login"> <img class="profilo" src="/static/profilo.png" > </a> 
+        </h2>
+         
+        </div>
+        
+        <div class="image"> <!-- immaggine di rappresentanza-->
+            <img src="/static/piacenza.jpg" style="width: 100%; height: 50% ">  <!-- creare successivamente classe flex che ridiemnsione immaggine rispetto al dispositivo https://www.html.it/articoli/immagini-flessibili/  -->
+        </div>
+        
+        <div class="argomentoh3"> 
+            <h3>
+                Chi Siamo
+            </h3>
+        </div>
+        <div style="overflow: auto; margin-bottom: 40px;">
+            
+            <p class="argomento">
+            Space-Gym è una rete di palestre all'avanguardia nel settore del fitness, distribuite in diversi quartieri di Roma.
+             Potrai prenotare il tuo space per allenarti da solo o in compagnia dei tuoi amici. Nei nostri spaces troverai a tua disposizione tutto il necessario per l'allenamento a corpo libero o con i rack di ultima generazione.
+            Per prenotare il tuo space clicca sul <a href="/login">link</a> 
+            </p> 
+            <img class="logobig" src="/static/image.png" /> </div>
+            <h3 class="trova">Galleria Immagini</h3>
+            <div class="slider-container">
+                <span id="slider-image-1"></span>
+                <span id="slider-image-2"></span>
+                <span id="slider-image-3"></span>
+                <div class="image-container">
+                   <img src="/static/1.jpeg" class="slider-image"/><img src="/static/2.jpeg" class="slider-image"/><img src="/static/3.jpeg" class="slider-image"/>
+                </div>
+                <div class="button-container">
+                    <a href="#slider-image-1" class="slider-change"></a>
+                    <a href="#slider-image-2" class="slider-change"></a>
+                    <a href="#slider-image-3" class="slider-change"></a>
+                </div>
+        </div>
+        <div class="where">  
+            <h3 class="trova">
+               Dove ci trovi:
+            </h3>
+             <!--<p>
+                Qui sotto trovera una Mappa con tutte le nostre palestre attuali
+            </p> -->
+            <div id="map" style="height: 700px ; width: 1200px; display: flex; justify-content: center; margin: 0 auto;">
+            <script>
+                (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+                  key: "{{ google_maps_api_key }}",
+                  v: "weekly",
+                  
+                });
+              </script>
+            </div>
+                    
+                </div>
+            </body>
+        
+    </body>
+    
+
+
+
+
+
+
+
+</html>

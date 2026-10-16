@@ -1,0 +1,26 @@
+title{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+table{
+    border: 1px solid;
+    text-align: center;
+    width: 100%;
+}
+th {
+    border: 1px solid ;
+}
+body{
+    
+    background-size: cover;
+    opacity: -0,3;
+}
+
+img{
+    background-image: url(piacenza-2.jpg);
+}
+head{
+   
+}
